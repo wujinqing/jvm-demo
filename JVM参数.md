@@ -6,7 +6,7 @@
 
 > 在VM的参数设置中一共只有三种设置方式：
 
-> -XX:+\<option>, 表示开启option选项
+> -XX:+\<option>, 表示开启option选项, boolean值类型参数
 
 > -XX:-\<option>, 表示关闭option选项
 
