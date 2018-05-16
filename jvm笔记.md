@@ -269,10 +269,17 @@ Java虚拟机本身就是一个进程，在下面几种情况下就结束生命�
 
 > Class.forName("com.jin.jvm.classloader.CL");// 主动使用
 
+### 类加载器
 
+> sun.misc.Launcher$AppClassLoader@14dad5dc 系统类加载器或者应用类加载器
+> sun.misc.Launcher$ExtClassLoader@4b1210ee 扩展类加载器
+> null 启动类加载器（java doc 里面说明了有些实现将getParent返回为null来代表启动类加载器）
 
+**类加载器是加载类的，不是对象的，跟对象没有关系**
 
+**每一个类都是由类加载器加载到JVM当中的**
 
+![类加载器](img/11.png)
 
 
 
