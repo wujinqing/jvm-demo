@@ -37,9 +37,41 @@
 
 > 然而，一些类并不是来自于文件，可能是从其他来源得到的，比如说，通过网络，或者是由应用本身构建出来的(如动态代理)。
 
-> 方法defineClass会将字节数组转换成Class的实例，新定义的实例可以通过Class.newInstance来创建。
+> 方法defineClass会将字节数组转换成Class的实例，新定义的Class对象的实例可以通过Class.newInstance来创建。
+
+> 由类加载器创建的对象的方法和构造方法还可能引用其他对象，为了确定被引用的类都是什么，Java虚拟机会调用加载当前类的类加载器的loadClass方法
+
+> 去加载它所引用的其他的类。
 
 
+> 比如说：一个应用可以创建一个网络类加载器从一个服务器去下载Class文件，以下是一些简单的代码：
+
+```java
+    ClassLoader loader = new NetworkClassLoader(host, port);
+     Object main = loader.loadClass("Main", true).newInstance();
+          . . .
+
+```
+
+> 网络类加载器的子类必须定义findClass和loadClassData从网络去加载一个类。一旦它将构成类的字节码下载好之后，
+> 它应该调用defineClass来去创建类的实例，一个简单的实现如下：
+
+```java
+       class NetworkClassLoader extends ClassLoader {
+           String host;
+           int port;
+
+           public Class findClass(String name) {
+               byte[] b = loadClassData(name);
+               return defineClass(name, b, 0, b.length);
+           }
+
+           private byte[] loadClassData(String name) {
+               // load the class data from the connection
+                . . .
+           }
+       }
+```
 
 ### 二进制名(binary name)
 
@@ -48,9 +80,9 @@
 > 有效的类名：
 
 * "java.lang.String"
-*   "javax.swing.JSpinner$DefaultEditor"
-*   "java.security.KeyStore$Builder$FileBuilder$1"
-*   "java.net.URLClassLoader$3$1"
+* "javax.swing.JSpinner$DefaultEditor"
+* "java.security.KeyStore$Builder$FileBuilder$1"
+* "java.net.URLClassLoader$3$1"
 
 ### 定位
 
