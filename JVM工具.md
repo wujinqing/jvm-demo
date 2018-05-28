@@ -7,6 +7,8 @@
 
 > javap -c com.jin.jvm.classloader.MyTest2 会输出详细信息
 
+### jvisualvm 线程监视工具
+
 
 
 

@@ -8,6 +8,7 @@ import java.io.InputStream;
 public class MyTest16 extends ClassLoader
 {
     private String classLoaderName;
+    private String path; //Class文件所在位置的绝对路径
     private static final String fileExtention = ".class";
 
     public MyTest16 (String classLoaderName)
@@ -27,11 +28,13 @@ public class MyTest16 extends ClassLoader
         return "[" + this.classLoaderName + "]";
     }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     @Override
     protected Class<?> findClass(String className) throws ClassNotFoundException {
-        System.out.println("findClass invoked");
-
-
+        System.out.println("findClass invoked: " + className);
 
         byte[] data = loadClassData(className);
 
@@ -48,11 +51,9 @@ public class MyTest16 extends ClassLoader
 
         try {
 
-            this.classLoaderName = this.classLoaderName.replace(".", "/");
             name = name.replace(".", "/");
-            name = "/workspace/jvm-demo/out/production/classes/" + name;
 
-            is = new FileInputStream(new File(name + fileExtention));
+            is = new FileInputStream(new File(this.path +name + fileExtention));
 
             int ch = 0;
 
@@ -80,6 +81,7 @@ public class MyTest16 extends ClassLoader
 
     private static void test(ClassLoader classLoader) throws Exception
     {
+        // 系统类加载器是MyTest1类的定义类加载器，而系统类加载器和MyTest16是MyTest1类的初始类加载器
         Class<?> clazz = classLoader.loadClass("com.jin.jvm.classloader.MyTest1");
 
         Object object = clazz.newInstance();
@@ -88,8 +90,67 @@ public class MyTest16 extends ClassLoader
     }
 
     public static void main(String[] args) throws Exception {
-        MyTest16 myTest16 = new MyTest16(null, "loader1");
+        MyTest16 loader1  = new MyTest16("loader1");
 
-        test(myTest16);
+        loader1.setPath("/Users/wujinqing/Desktop/");
+
+        // comand + w：不断选中快捷键
+        Class<?> clazz = loader1.loadClass("com.jin.jvm.classloader.MyTest1");
+        System.out.println("class:" + clazz.hashCode());
+        Object object = clazz.newInstance();
+
+        System.out.println(object.getClass().getClassLoader());
+        System.out.println(object);
+
+
+
+        loader1 = null;
+        clazz = null;
+        object = null;
+
+        // -XX:+TraceClassUnloading 模拟类的卸载
+        // [Unloading class com.jin.jvm.classloader.MyTest1 0x00000007c0061028]
+        System.gc();
+
+        Thread.sleep(100000);
+
+//        MyTest16 loader2 = new MyTest16("loader2");
+//
+//        loader2.setPath("/Users/wujinqing/Desktop/");
+//
+//        // 类加载器的命名空间不同
+//        Class<?> clazz2 = loader2.loadClass("com.jin.jvm.classloader.MyTest1");
+//        System.out.println("class: " + clazz2.hashCode());
+//
+//        Object object2 = clazz2.newInstance();
+//        System.out.println(object2.getClass().getClassLoader());
+//        System.out.println(object2);
+
+
+        // 同一个类的两个类加载器实例可以成为父子关系(因为类加载器是包含关系)
+//        MyTest16 loader2 = new MyTest16(loader1,"loader2");
+//
+//        loader2.setPath("/Users/wujinqing/Desktop/");
+//
+//        // 类加载器的命名空间不同
+//        Class<?> clazz2 = loader2.loadClass("com.jin.jvm.classloader.MyTest1");
+//        System.out.println("class: " + clazz2.hashCode());
+//
+//        Object object2 = clazz2.newInstance();
+//        System.out.println(object2.getClass().getClassLoader());
+//        System.out.println(object2);
+//
+//
+//        MyTest16 loader3 = new MyTest16(loader2,"loader2");
+//
+//        loader3.setPath("/Users/wujinqing/Desktop/");
+//
+//        // 类加载器的命名空间不同
+//        Class<?> clazz3 = loader3.loadClass("com.jin.jvm.classloader.MyTest1");
+//        System.out.println("class: " + clazz2.hashCode());
+//
+//        Object object3 = clazz3.newInstance();
+//        System.out.println(object3.getClass().getClassLoader());
+//        System.out.println(object3);
     }
 }
