@@ -25,6 +25,7 @@ public class MyTest9 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Child.b);
+//        System.out.println(Child.b);
+        System.out.println(Child.a);
     }
 }
