@@ -1,6 +1,6 @@
 package com.jin.jvm.classloader;
 
-public class MyTesst17 {
+public class MyTest17 {
     public static void main(String[] args) throws Exception{
         MyTest16 loader1 = new MyTest16("loader1");
 

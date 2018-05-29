@@ -293,8 +293,34 @@ Java虚拟机本身就是一个进程，在下面几种情况下就结束生命�
 ![类的卸载](img/14.png)
 ![类的卸载](img/15.png)
 
+### 它是由加载MySample类加载器来去尝试加载MyCat类
 
+```java
+public class MySample {
+    public MySample()
+    {
+        System.out.println("MySample is loaded by :" + this.getClass().getClassLoader());
 
+        // 它是由加载MySample类加载器来去尝试加载MyCat类
+        new MyCat();
+    }
+}
+```
+
+### 关于命名空间的重要说明：
+
+> 1.子加载器所加载的类能够访问到父加载器所加载的类
+
+> 2.父加载器所加载的类无法访问到子加载器所加载的类
+
+### 各种类加载器加载类的路径
+
+> 启动类加载器加载类的目录
+> System.out.println(System.getProperty("sun.boot.class.path"));
+> 扩展类加载器加载类的目录
+> System.out.println(System.getProperty("java.ext.dirs"));
+> 系统(应用)类加载器加载类的目录
+> System.out.println(System.getProperty("java.class.path"));
 
 
 

@@ -23,10 +23,7 @@ public class MyTest16 extends ClassLoader
         this.classLoaderName = classLoaderName;
     }
 
-    @Override
-    public String toString() {
-        return "[" + this.classLoaderName + "]";
-    }
+
 
     public void setPath(String path) {
         this.path = path;
