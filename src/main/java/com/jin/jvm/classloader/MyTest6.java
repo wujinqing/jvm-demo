@@ -59,21 +59,19 @@ public class MyTest6 {
  */
 class Singleton {
     public static int counter1;// 连接的准备阶段该值被赋为0， counter2也是
-
-
-
     private static Singleton singleton = new Singleton();
+    public static int counter2 = 0;// 初始化阶段被赋值为 0 ，这时counter2 = 0
 
     private Singleton()
     {
         counter1++;// counter1 = 1
-        counter2++;// counter2 = 1    准备阶段的重要意义 如果没有准备阶段给counter2赋0，那么这样就好有问题
+        counter2++;// counter2 = 1    准备阶段的重要意义 如果没有准备阶段给counter2赋0，那么这样就会有问题
 
         System.out.println(counter1);
         System.out.println(counter2);
     }
 
-    public static int counter2 = 0;// 初始化阶段被赋值为 0 ，这时counter2 = 0
+
     public static Singleton getInstance()
     {
         return singleton;

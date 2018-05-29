@@ -16,11 +16,11 @@ package com.jin.jvm.classloader;
  */
 public class MyTest2 {
     public static void main(String[] args) {
-//        System.out.println(MyParent2.str);
+        System.out.println(MyParent2.str);
 //        System.out.println(MyParent2.s);
 //        System.out.println(MyParent2.i);
 
-        System.out.println(MyParent2.m);
+//        System.out.println(MyParent2.m);
     }
 }
 

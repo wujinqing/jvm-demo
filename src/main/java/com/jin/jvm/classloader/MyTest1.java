@@ -21,8 +21,8 @@ public class MyTest1 {
         执行 System.out.println(MyChild1.str);  按顺序加载MyTest1、MyParent1、MyChild1类
      */
     public static void main(String[] args) {
-//        System.out.println(MyChild1.str);// 静态字段str定义在父类里面，子类不会被初始化
-        System.out.println(MyChild1.str2);
+        System.out.println(MyChild1.str);// 静态字段str定义在父类里面，子类不会被初始化
+//        System.out.println(MyChild1.str2);
     }
 }
 
