@@ -23,6 +23,14 @@ public class MyTest16 extends ClassLoader
         this.classLoaderName = classLoaderName;
     }
 
+    /**
+     * 为了让MyTest16成为系统类加载器，必须给这个构造方法
+     * @param parent
+     */
+    public MyTest16(ClassLoader parent) {
+        super(parent);
+    }
+
 
 
     public void setPath(String path) {
