@@ -22,7 +22,7 @@ public class MyTest22 {
         System.out.println("MyTest22 initializer");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println(MyTest22.class.getClassLoader());
         System.out.println(MyTest1.class.getClassLoader());
     }

@@ -38,7 +38,7 @@ import sun.misc.Launcher;
     启动类加载器还会负责加载供JRE正常运行所需要的基本组件，这包括java.util和java.lang包中的类等等。
  */
 public class MyTest23 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         // 启动类加载器加载类的目录
         System.out.println(System.getProperty("sun.boot.class.path"));
         // 扩展类加载器加载类的目录
@@ -59,5 +59,8 @@ public class MyTest23 {
         System.out.println(MyTest16.class.getClassLoader());
         //java -Djava.system.class.loader=com.jin.jvm.classloader.MyTest16 com.jin.jvm.classloader.MyTest23
         System.out.println(ClassLoader.getSystemClassLoader());
+
+        Class<?> clazz = Class.forName("com.jin.jvm.classloader.MyTest22", false, MyTest22.class.getClassLoader());
+
     }
 }
