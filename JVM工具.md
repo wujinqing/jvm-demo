@@ -7,7 +7,11 @@
 
 > javap -c com.jin.jvm.classloader.MyTest2 会输出详细信息
 
+> javap -verbose com.jin.jvm.bytecode.MyTest1 会输出更详细信息
+
 ### jvisualvm 线程监视工具
+
+### hex fiend十六进制查看器
 
 
 
