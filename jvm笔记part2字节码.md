@@ -55,8 +55,14 @@
 
 ![](img/p26.png)
 
+ACC_PRIVATE 0X0002
 
+### 字段表
+![](img/p27.png)
 
+![](img/p28.png)
+
+![](img/p29.png)
 
 
 
