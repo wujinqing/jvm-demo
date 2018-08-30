@@ -64,28 +64,39 @@ ACC_PRIVATE 0X0002
 
 ![](img/p29.png)
 
+### 方法表
 
+![](img/p30.png)
 
+![](img/p31.png)
 
+![](img/p32.png)
 
+![](img/p33.png)
 
+![](img/p34.png)
 
+![](img/p35.png)
 
+![](img/p36.png)
 
+> Code属于attribute
 
+### Code（方法体内容字节码）
 
+![](img/p37.png)
 
+![](img/p38.png)
 
+![](img/p39.png)
 
+![](img/p40.png)
 
+![](img/p41.png)
 
+![](img/p42.png)
 
-
-
-
-
-
-
+![](img/p43.png)
 
 
 
