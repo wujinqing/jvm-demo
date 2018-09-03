@@ -98,7 +98,11 @@ ACC_PRIVATE 0X0002
 
 ![](img/p43.png)
 
+> 源代码将会转换成一条一条的指令(助记符)
 
+[指令集(助记符集)](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.aload_n)
+
+在字节码中每一个实例方法(含构造方法)的第一个局部变量都是this(隐式传递)
 
 
 
