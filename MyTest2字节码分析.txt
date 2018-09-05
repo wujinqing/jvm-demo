@@ -1,0 +1,310 @@
+字节码：CA FE BA BE 00 00 00 34 00 2F 0A 00 0A 00 22 08 00 23 09 00 05 00 24 09 00 05 00 25 07 00 26 0A 00 05 00 22 0A 00 05 00 27 0A 00 28 00 29 09 00 05 00 2A 07 00 2B 01 00 03 73 74 72 01 00 12 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B 01 00 01 78 01 00 01 49 01 00 02 69 6E 01 00 13 4C 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72 3B 01 00 06 3C 69 6E 69 74 3E 01 00 03 28 29 56 01 00 04 43 6F 64 65 01 00 0F 4C 69 6E 65 4E 75 6D 62 65 72 54 61 62 6C 65 01 00 12 4C 6F 63 61 6C 56 61 72 69 61 62 6C 65 54 61 62 6C 65 01 00 04 74 68 69 73 01 00 1E 4C 63 6F 6D 2F 6A 69 6E 2F 6A 76 6D 2F 62 79 74 65 63 6F 64 65 2F 4D 79 54 65 73 74 32 3B 01 00 04 6D 61 69 6E 01 00 16 28 5B 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B 29 56 01 00 04 61 72 67 73 01 00 13 5B 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B 01 00 07 6D 79 54 65 73 74 32 01 00 04 73 65 74 58 01 00 04 28 49 29 56 01 00 08 3C 63 6C 69 6E 69 74 3E 01 00 0A 53 6F 75 72 63 65 46 69 6C 65 01 00 0C 4D 79 54 65 73 74 32 2E 6A 61 76 61 0C 00 11 00 12 01 00 07 57 65 6C 63 6F 6D 65 0C 00 0B 00 0C 0C 00 0D 00 0E 01 00 1C 63 6F 6D 2F 6A 69 6E 2F 6A 76 6D 2F 62 79 74 65 63 6F 64 65 2F 4D 79 54 65 73 74 32 0C 00 1D 00 1E 07 00 2C 0C 00 2D 00 2E 0C 00 0F 00 10 01 00 10 6A 61 76 61 2F 6C 61 6E 67 2F 4F 62 6A 65 63 74 01 00 11 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72 01 00 07 76 61 6C 75 65 4F 66 01 00 16 28 49 29 4C 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72 3B 00 21 00 05 00 0A 00 00 00 03 00 00 00 0B 00 0C 00 00 00 02 00 0D 00 0E 00 00 00 09 00 0F 00 10 00 00 00 04 00 01 00 11 00 12 00 01 00 13 00 00 00 42 00 02 00 01 00 00 00 10 2A B7 00 01 2A 12 02 B5 00 03 2A 08 B5 00 04 B1 00 00 00 02 00 14 00 00 00 0E 00 03 00 00 00 03 00 04 00 04 00 0A 00 06 00 15 00 00 00 0C 00 01 00 00 00 10 00 16 00 17 00 00 00 09 00 18 00 19 00 01 00 13 00 00 00 57 00 02 00 02 00 00 00 17 BB 00 05 59 B7 00 06 4C 2B 10 08 B6 00 07 10 14 B8 00 08 B3 00 09 B1 00 00 00 02 00 14 00 00 00 12 00 04 00 00 00 0B 00 08 00 0D 00 0E 00 0F 00 16 00 10 00 15 00 00 00 16 00 02 00 00 00 17 00 1A 00 1B 00 00 00 08 00 0F 00 1C 00 17 00 01 00 01 00 1D 00 1E 00 01 00 13 00 00 00 3E 00 02 00 02 00 00 00 06 2A 1B B5 00 04 B1 00 00 00 02 00 14 00 00 00 0A 00 02 00 00 00 13 00 05 00 14 00 15 00 00 00 16 00 02 00 00 00 06 00 16 00 17 00 00 00 00 00 06 00 0D 00 0E 00 01 00 08 00 1F 00 12 00 01 00 13 00 00 00 21 00 01 00 00 00 00 00 09 10 0A B8 00 08 B3 00 09 B1 00 00 00 01 00 14 00 00 00 06 00 01 00 00 00 08 00 01 00 20 00 00 00 02 00 21
+
+
+4个字节：魔数
+CA FE BA BE
+两个字节：次版本号
+00 00
+两个字节：主版本号(52, jdk8)
+00 34
+2个字节：常量池个数(47-1=46)
+00 2F
+#1：0A(TAG为10, CONSTANT_Methodref_Info, 方法描述符索引00 0A#10， 方法签名索引00 22#34)
+0A 00 0A 00 22
+#2：08(TAG为8, CONSTANT_String_Info) 指向00 23#35
+08 00 23
+#3：09(TAG为9, CONSTANT_Fieldref_Info) 指向类或接口描述符：00 05#5， 字段描述符00 24#36
+09 00 05 00 24
+#4：09(TAG为9, CONSTANT_Fieldref_Info) 指向类或接口描述符：00 05#5， 字段描述符00 25#37
+09 00 05 00 25
+#5: 07(TAG为7, CONSTANT_Class_Info)指向全限定名常量索引00 26#38
+07 00 26
+#6：0A(TAG为10, CONSTANT_Methodref_Info, 方法描述符索引00 05#5， 方法签名索引00 22#34)
+0A 00 05 00 22
+#7：0A(TAG为10, CONSTANT_Methodref_Info, 方法描述符索引00 05#5， 方法签名索引00 27#39)
+0A 00 05 00 27
+#8：0A(TAG为10, CONSTANT_Methodref_Info, 方法描述符索引00 28#40， 方法签名索引00 29#41)
+0A 00 28 00 29
+#9：09(TAG为9, CONSTANT_Fieldref_Info) 指向类或接口描述符：00 05#5， 字段描述符00 2A#42
+09 00 05 00 2A
+#10: 07(TAG为7, CONSTANT_Class_Info)指向全限定名常量索引00 2B#43
+07 00 2B
+#11: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 03(3个字节)，值：str
+01 00 03 73 74 72
+#12: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 12(18个字节)，值：Ljava/lang/String;
+01 00 12 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B
+#13: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 01(1个字节)，值：x
+01 00 01 78
+#14: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 01(1个字节)，值：I
+01 00 01 49
+#15: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 02(2个字节)，值：in
+01 00 02 69 6E
+#16: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 13(19个字节)，值：Ljava/lang/Integer;
+01 00 13 4C 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72 3B
+#17: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 06(6个字节)，值：<init>
+01 00 06 3C 69 6E 69 74 3E
+#18: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 03(3个字节)，值：()V
+01 00 03 28 29 56
+#19: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：Code
+01 00 04 43 6F 64 65
+#20: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 0F(15个字节)，值：LineNumberTable
+01 00 0F 4C 69 6E 65 4E 75 6D 62 65 72 54 61 62 6C 65
+#21: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 12(18个字节)，值：LocalVariableTable
+01 00 12 4C 6F 63 61 6C 56 61 72 69 61 62 6C 65 54 61 62 6C 65
+#22: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：this
+01 00 04 74 68 69 73
+#23: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 1E(30个字节)，值：Lcom/jin/jvm/bytecode/MyTest2;
+01 00 1E 4C 63 6F 6D 2F 6A 69 6E 2F 6A 76 6D 2F 62 79 74 65 63 6F 64 65 2F 4D 79 54 65 73 74 32 3B
+#24: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：main
+01 00 04 6D 61 69 6E
+#25: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 16(22个字节)，值：([Ljava/lang/String;)V
+01 00 16 28 5B 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B 29 56
+#26: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：args
+01 00 04 61 72 67 73
+#27: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 13(19个字节)，值：[Ljava/lang/String;
+01 00 13 5B 4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E 67 3B
+#28: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 07(7个字节)，值：myTest2
+01 00 07 6D 79 54 65 73 74 32
+#29: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：setX
+01 00 04 73 65 74 58
+#30: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 04(4个字节)，值：(I)V
+01 00 04 28 49 29 56
+#31: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 08(8个字节)，值：<clinit>
+01 00 08 3C 63 6C 69 6E 69 74 3E
+#32: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 0A(10个字节)，值：SourceFile
+01 00 0A 53 6F 75 72 63 65 46 69 6C 65
+#33: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 0C(12个字节)，值：MyTest2.java
+01 00 0C 4D 79 54 65 73 74 32 2E 6A 61 76 61
+#34: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 11(#17),指向该字段方法描述符常量项索引00 12(#18), 值：<init> ()V
+0C 00 11 00 12
+#35: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 07(7个字节)，值：Welcome
+01 00 07 57 65 6C 63 6F 6D 65
+#36: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 0B(#11),指向该字段方法描述符常量项索引00 0C(#12), 值：str  Ljava/lang/String;
+0C 00 0B 00 0C
+#37: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 0D(#13),指向该字段方法描述符常量项索引00 0E(#14), 值：x  I
+0C 00 0D 00 0E
+#38: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 1C(28个字节)，值：com/jin/jvm/bytecode/MyTest2
+01 00 1C 63 6F 6D 2F 6A 69 6E 2F 6A 76 6D 2F 62 79 74 65 63 6F 64 65 2F 4D 79 54 65 73 74 32
+#39: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 1D(#29),指向该字段方法描述符常量项索引00 1E(#30), 值：setX  (I)V
+0C 00 1D 00 1E
+#40: 07(TAG为7, CONSTANT_Class_Info)指向全限定名常量索引00 2C#44
+07 00 2C
+#41: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 2D(#45),指向该字段方法描述符常量项索引00 2E(#46), 值：
+0C 00 2D 00 2E
+#42: 0C(TAG为12, CONSTANT_NameAndType_Info)指向该字段方法名称常量项索引，00 0F(#15),指向该字段方法描述符常量项索引00 10(#16), 值：in Ljava/lang/Integer;
+0C 00 0F 00 10
+#43: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 10(16个字节)，值：java/lang/Object
+01 00 10 6A 61 76 61 2F 6C 61 6E 67 2F 4F 62 6A 65 63 74
+#44: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 11(17个字节)，值：java/lang/Integer
+01 00 11 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72
+#45: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 07(7个字节)，值：valueOf
+01 00 07 76 61 6C 75 65 4F 66
+#46: 01(TAG为1, CONSTANT_UTF8_Info)utf8编码的字符串，长度：00 16(22个字节)，值：(I)Ljava/lang/Integer;
+01 00 16 28 49 29 4C 6A 61 76 61 2F 6C 61 6E 67 2F 49 6E 74 65 67 65 72 3B
+
+两个字节：访问标记SUPER  PUBLIC
+00 21
+两个字节：当前类名索引 com/jin/jvm/bytecode/MyTest2
+00 05
+两个字节：父类名索引 java/lang/Object
+00 0A
+两个字节：接口个数  0个
+00 00
+两个字节：字段个数 3个
+00 03
+n个字节：字段表
+第一个字段：
+00 00 访问修饰符：没有访问修饰符
+00 0B 值：str
+00 0C 值：Ljava/lang/String;
+00 00 属性长度为0
+
+第二个字段：
+00 02 访问修饰符：ACC_PRIVATE
+00 0D 值：x
+00 0E 值：I
+00 00 属性长度为0
+
+第三个字段：
+00 09 访问修饰符：ACC_PUBLIC, ACC_STATIC
+00 0F 值：in
+00 10 值：Ljava/lang/Integer;
+00 00 属性个数为0
+
+方法：
+
+00 04 方法个数：4个
+第一个方法：
+00 01 访问修饰符：ACC_PUBLIC
+00 11 值：<init>
+00 12 值：()V
+
+00 01 属性个数为1
+
+00 13 属性名字索引：#19 Code
+00 00 00 42 属性长度：66
+00 02 max_stack: 2
+00 01 max_locals: 1
+00 00 00 10 :code_length 16
+2A: aload_0 Load reference from local variable
+B7 00 01 : invokespecial: Invoke instance method; special handling for superclass, private, and instance initialization method invocations #1 java/lang/Object <init> ()V
+2A ：aload_0 Load reference from local variable
+12 02 ：ldc：Push item from run-time constant pool #2 Welcome
+B5 00 03 ：putfield ： Set field in object #3 com/jin/jvm/bytecode/MyTest2.str
+2A ：aload_0 Load reference from local variable
+08 ：iconst_5
+B5 00 04 ：putfield ： Set field in object #4 com/jin/jvm/bytecode/MyTest2.x
+B1 : return: Return void from method
+
+00 00 exception_table_length 个数为0
+
+00 02 属性个数 2个
+00 14 ：属性名索引：#20  LineNumberTable
+00 00 00 0E ：属性长度 14
+00 03 ：line_number_table_length 3个
+00 00 00 03 ：0，3
+00 04 00 04 ：4，4
+00 0A 00 06 ：10，6
+
+00 15 ：属性名索引：#21 LocalVariableTable
+00 00 00 0C ：属性长度 12
+00 01 : local_variable_table_length 1个
+00 00 00 10 ：0，16
+00 16 00 17 ：this Lcom/jin/jvm/bytecode/MyTest2;
+00 00
+
+第二个方法：
+00 09：ACC_STATIC， ACC_PUBLIC
+00 18 00 19 ：main ([Ljava/lang/String;)V
+00 01 ：属性个数 1个
+00 13 ：属性名：Code
+00 00 00 57 ：属性长度 87
+00 02 ：max_stack 2
+00 02 : max_locals 2
+00 00 00 17 :code_length 23
+BB 00 05 : new :   Create new object : #5 com/jin/jvm/bytecode/MyTest2
+59 :dup:Duplicate the top operand stack value
+B7 00 06 :invokespecial:Invoke instance method; special handling for superclass, private, and instance initialization method invocations
+4C :astore_1:Store reference into local variable
+2B :aload_1:Load reference from local variable
+10 08 :bipush:Push byte:8
+B6 00 07 :invokevirtual:Invoke instance method; dispatch based on class:#7 com/jin/jvm/bytecode/MyTest2.setX
+10 14 :bipush:Push byte:20
+B8 00 08 :invokestatic:Invoke a class (static) method:java/lang/Integer.valueOf
+B3 00 09 :putstatic:Set static field in class:#9 com/jin/jvm/bytecode/MyTest2.in
+B1 :return:Return void from method
+
+00 00 :异常表长度 0
+
+00 02 ：属性个数 2个
+00 14 ：属性名字索引#20  LineNumberTable
+00 00 00 12 ：属性长度 18
+00 04 ：LineNumberTable长度4
+00 00 00 0B ：0，11
+00 08 00 0D ：8，13
+00 0E 00 0F ：14，15
+00 16 00 10 ：22， 16
+
+00 15 ：属性名字索引#21  LocalVariableTable
+00 00 00 16 ：属性长度 22
+00 02 ：LocalVariableTable长度2
+00 00 00 17 ：0，23
+00 1A 00 1B ：args [Ljava/lang/String;
+00 00 ：局部变量索引 0
+00 08 00 0F ：8，15
+00 1C 00 17 ：myTest2 Lcom/jin/jvm/bytecode/MyTest2;
+00 01 ：局部变量索引 1
+
+第三个方法：
+00 01 访问修饰符：ACC_PUBLIC
+
+00 1D 00 1E ：setX (I)V
+00 01 ：属性个数 1
+00 13 ：属性名：Code
+00 00 00 3E ：属性长度 62
+00 02 ：max_stack 2
+00 02 : max_locals 2
+00 00 00 06 :code_length 6
+2A ：aload_0 Load reference from local variable
+1B ：iload_1：Load int from local variable
+B5 00 04 ：putfield ： Set field in object #4 com/jin/jvm/bytecode/MyTest2.x
+B1 :return:Return void from method
+00 00 :异常表长度 0
+00 02 ：属性个数 2个
+00 14 ：属性名字索引#20  LineNumberTable
+00 00 00 0A ：属性长度 10
+00 02 ：LineNumberTable长度2
+00 00 00 13 ：0，19
+00 05 00 14 ：5，20
+00 15 ：属性名字索引#21  LocalVariableTable
+00 00 00 16 ：属性长度 22
+00 02 ：LocalVariableTable长度2
+00 00 00 06 ：0，6
+00 16 00 17 ：this Lcom/jin/jvm/bytecode/MyTest2;
+00 00 ：局部变量索引 0
+00 00 00 06 ：0，6
+00 0D 00 0E ：x I
+00 01 ：局部变量索引 1
+
+
+第四个方法：
+00 08 ：ACC_STATIC
+00 1F 00 12 ：<clinit> ()V
+00 01 ：属性个数 1
+00 13 ：属性名：Code
+00 00 00 21 ：属性长度 33
+00 01 ：max_stack 1
+00 00 : max_locals 0
+00 00 00 09 :code_length 9
+10 0A :bipush:Push byte:10
+B8 00 08 :invokestatic:Invoke a class (static) method: #8 java/lang/Integer valueOf (I)Ljava/lang/Integer;
+
+B3 00 09 :putstatic:Set static field in class:#9 com/jin/jvm/bytecode/MyTest2  in Ljava/lang/Integer;
+B1 :return:Return void from method
+00 00 :异常表长度 0
+00 01 ：属性个数 1个
+00 14 ：属性名字索引#20  LineNumberTable
+00 00 00 06 ：属性长度 6
+00 01 ：LineNumberTable长度1
+00 00 00 08 ：0，8
+
+
+00 01 ：attributes_count
+00 20 : 属性名索引 #32 SourceFile
+00 00 00 02 ：属性长度 2个字节
+00 21：属性名索引 #33 MyTest2.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -98,6 +98,25 @@ ACC_PRIVATE 0X0002
 
 ![](img/p43.png)
 
+### LocalVariableTable结构
+```
+LocalVariableTable_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 local_variable_table_length;
+    local_variable_info[local_variable_table_length];
+}
+
+
+local_variable_info {
+    u2 start_pc;
+    u2 length;
+    u2 name_index;
+    u2 descriptor_index;
+    u2 indext; 局部变量索引
+}
+```
+
 > 源代码将会转换成一条一条的指令(助记符)
 
 [指令集(助记符集)](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.aload_n)
