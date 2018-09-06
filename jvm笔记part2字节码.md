@@ -123,6 +123,10 @@ local_variable_info {
 
 在字节码中每一个实例方法(含构造方法)的第一个局部变量都是this(隐式传递)
 
+### synchronized方法或代码块
+> 会在字节码中插入一个monitorenter指令，及一个或者多个monitorexit指令
+
+> 当synchronized修饰方法时如果是实例方法那么锁的是当前对象this，如果是静态方法那么锁的是当前类的Class对象。
 
 
 
