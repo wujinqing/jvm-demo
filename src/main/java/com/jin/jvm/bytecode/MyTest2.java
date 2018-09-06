@@ -7,6 +7,15 @@ public class MyTest2 {
 
     public static Integer in = 10;
 
+    public MyTest2()
+    {
+
+    }
+
+    public MyTest2(String s)
+    {
+        str = s;
+    }
     public static void main(String[] args) {
         MyTest2 myTest2 = new MyTest2();
 
