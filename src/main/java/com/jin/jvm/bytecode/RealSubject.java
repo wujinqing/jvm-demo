@@ -5,4 +5,10 @@ public class RealSubject implements Subject {
     public void request() {
         System.out.println("from real sub.");
     }
+
+    @Override
+    public String toString() {
+        System.out.println("to string");
+        return "hello to s";
+    }
 }
